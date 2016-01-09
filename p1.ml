@@ -1,4 +1,8 @@
+(*
+ * Write a function last : 'a list -> 'a option that returns the last element of
+ * a list.
+ *)
 let rec last = function 
-    [] -> raise Not_found
-    | [e] -> e
+    [] -> None
+    | [e] -> Some e 
     | h :: r -> last r;;
